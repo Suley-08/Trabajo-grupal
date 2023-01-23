@@ -1,0 +1,22 @@
+.container {
+    width: 700px;
+    padding: 15px;
+}
+
+.nav-tabs a {
+    padding: 8px 5px 15px 2px;
+    margin-right: 40px;
+}
+
+.nav-active {
+    border: none !important;
+    border-bottom: 3px solid hotpink !important;
+    color: hotpink !important;
+}
+
+.icon i {
+    padding: 10px 14px;
+    border-radius: 50%;
+    color: white;
+    font-size: 25px;
+}

@@ -1,0 +1,9 @@
+.container{
+    width: 400px;
+    height: auto;
+    margin-top: 70px;
+}
+.btn {
+    width: 375px;
+    background-color: #ffafcc;
+}

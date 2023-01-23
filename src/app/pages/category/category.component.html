@@ -1,0 +1,47 @@
+<div class="container justify-content-center my-5">
+    <h4><b>Categories</b></h4>
+    <ul class="nav nav-tabs">
+      <li class="nav-item"><a class="nav-link active nav-active"  href="#"><i class="bi bi-dash-circle"></i> Expenses</a></li>
+      <li class="nav-item"><a class="nav-link text-secondary" href="#"><i class="bi bi-plus-circle"></i> Income</a></li>
+    </ul>
+    <div class="mt-5">
+      <div class="text-center">
+        <h2 class="text-danger fw-bold">$ 1,250</h2>
+        <span class="text-secondary">Total Expenses</span>
+      </div>
+      <div class="row mt-5">
+        <div class="col-4" *ngFor="let item of categories">
+          <div class="card pt-2 pb-1 mb-3" [ngClass]="'border-'+item.color" >
+            <div class="row g-0">
+              <div class="col-md-4 icon text-center mt-2">
+                <i class="bi" [ngClass]="[item.icon, 'bg-'+item.color]" ></i>
+              </div>
+              <div class="col-md-8">
+                <span [ngClass]="'text-'+item.color">{{item.name}}</span>
+                <h4><b>{{item.amount | currency:"USD"}}</b></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4" data-bs-toggle="modal" data-bs-target="#modal_category">
+          <div class="card border-secondary border-line pt-4 pb-3 mb-3 text-center">
+            <i class="bi bi-plus fs-4 text-secondary"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+    
+  <div class="modal fade" id="modal_category" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">New Category</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-create-new-category (newcategoryevent)="newcategory($event)"></app-create-new-category>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,47 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.menu__side{
+    width: 300px;
+    height: 100%;
+    background-color:  lightgray;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+hr{
+    width: 300px;
+}
+.menu__options{
+    padding: 20px 30px;
+    position: absolute;
+    top: 80px;
+}
+.menu__options .menu{
+    color: #ffffffb2;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    transition: color 300ms;
+    margin-bottom: 3px;
+}
+.nav-link {
+    display:inline-block;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+.menu i {
+    margin-right: 10px; 
+}
+.menu:hover {
+    border: 2px;
+    border-radius: 10px;
+    width: 250px;
+    transform: scale(1.05);
+    background-color:  hotpink;
+    color: white;
+}
+.user .menu__footer{
+   width: 200px;
+   margin-left: 30px;
+}
